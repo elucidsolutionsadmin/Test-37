@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Elucid Solutions LLC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="image_1266fd.PNG" alt="Elucid Solutions Logo">
+            </a>
+            <nav>
+                <a href="index.html">Services</a>
+                <a href="contact.html" class="nav-cta">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="bg-surface">
+        <section class="container">
+            <div class="contact-layout">
+                <!-- Left Side: Context & Contact Info -->
+                <div class="contact-info">
+                    <h1 class="section-title" style="margin-bottom: 1.5rem;">Contact Us.</h1>
+                    <p>Reach out to discuss your project requirements, and we'll review your project and get back to you.</p>
+                    
+                    <div class="company-details">
+                        <h3>Edwin Barseghian</h3>
+                        <p style="color: var(--accent); font-weight: 500; margin-bottom: 1rem;">Principal Project Manager</p>
+                        <p>Elucid Solutions LLC</p>
+                        <p>PO Box 6275, Burbank CA 91510</p>
+                        <p style="margin-top: 0.5rem;"><strong>Email:</strong> edwin@elucidsolutions.net</p>
+                    </div>
+                </div>
+                
+                <!-- Right Side: B2B Form with Formspree AJAX -->
+                <div>
+                    <form id="contact-form" class="contact-form">
+                        
+                        <!-- Formspree Success/Error Message Containers -->
+                        <div data-fs-success style="color: #10b981; font-weight: 600; text-align: center; margin-bottom: 1rem;"></div>
+                        <div data-fs-error style="color: #ef4444; font-weight: 600; text-align: center; margin-bottom: 1rem;"></div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" data-fs-field required>
+                            </div>
+                            <div class="form-group">
+                                <label for="title">Title / Role</label>
+                                <input type="text" id="title" name="title" data-fs-field>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company" data-fs-field required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone (Optional)</label>
+                                <input type="tel" id="phone" name="phone" data-fs-field>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Work Email</label>
+                            <input type="email" id="email" name="email" data-fs-field required>
+                            <span data-fs-error="email" style="color: #ef4444; font-size: 0.85rem; margin-top: 0.25rem;"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" placeholder="Provide details regarding your project needs and exactly what AutoCAD tasks need to be executed..." data-fs-field required></textarea>
+                            <span data-fs-error="message" style="color: #ef4444; font-size: 0.85rem; margin-top: 0.25rem;"></span>
+                        </div>
+
+                        <button type="submit" class="btn" data-fs-submit-btn style="margin-top: 1rem; width: 100%;">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-legal">
+                Elucid Solutions LLC provides specialized CAD drafting, formatting, digitization, and drawing-production services based on client-provided source materials and technical direction. We do not independently design systems, perform engineering or architectural services, alter technical intent, or provide stamped professional drawings. Your team retains technical control.
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Elucid Solutions LLC. All rights reserved.</span>
+                <a href="terms.html">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Formspree AJAX SDK Integration -->
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#contact-form', formId: 'xqpkdkyj' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+</body>
+</html>
